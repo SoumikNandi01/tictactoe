@@ -4,9 +4,13 @@ var circle_turn = false;
 var board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var audio = new Audio("blue.mp3");
 
-$(document).keypress(function () {
+$("#start").click(function () {
   if (!started) {
     started = true;
+    var elements = document.getElementsByClassName("btn");
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].innerHTML = ''
+    }
     $("#title").text("Player X turn");
   }
 });
@@ -113,11 +117,4 @@ function reset() {
   cross_turn = true;
   circle_turn = false;
   board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-  var elements = document.getElementsByClassName("btn");
-  console.log(elements);
-  $(document).keypress(function () {
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].innerHTML = ''
-    }
-  });
 }

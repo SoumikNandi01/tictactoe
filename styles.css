@@ -3,6 +3,18 @@ body {
   background-color: #011F3F;
 }
 
+#start {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+}
+
 #title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
