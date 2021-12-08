@@ -4,7 +4,7 @@ var circle_turn = false;
 var board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var audio = new Audio("blue.mp3");
 
-$("#start").click(function () {
+$("#start").click(function() {
   if (!started) {
     started = true;
     var elements = document.getElementsByClassName("btn");
@@ -15,13 +15,13 @@ $("#start").click(function () {
   }
 });
 
-$(".btn").click(function () {
-    var chosenBox = $(this).attr("id");
-    if (!started) {
-      $("#title").text("Please start the game by pressing any key");
-      return;
-    }
-    validate(chosenBox)
+$(".btn").click(function() {
+  var chosenBox = $(this).attr("id");
+  if (!started) {
+    $("#title").text("Please start the game by pressing any key");
+    return;
+  }
+  validate(chosenBox)
 });
 
 function validate(chosenBox) {
